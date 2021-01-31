@@ -133,7 +133,7 @@ func (c *Client) dial(ctx context.Context, target string, opts ...grpc.DialOptio
 	}
 
 	if conn, err = grpc.DialContext(ctx, target, dialOptions...); err != nil {
-		fmt.Fprintf(os.Stderr, "guardian client:dial %s error %v!", target, err)
+		fmt.Fprintf(os.Stderr, "warden client:dial %s error %v!", target, err)
 	}
 
 	err = errors.WithStack(err)
